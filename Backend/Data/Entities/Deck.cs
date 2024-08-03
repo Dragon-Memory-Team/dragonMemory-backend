@@ -14,5 +14,8 @@ namespace Backend.Data.Entities
         
         public int CardsAmount { get { return Cards.Count; } }
 
+        public int UserId { get; set; }
+        public User User { get; set; } = null!;
+
     }
 }
