@@ -9,6 +9,8 @@ namespace Backend.Data
         {
         }
 
+
+        public DbSet<User> Users { get; set; }
         public DbSet<Card> Cards { get; set; }
         public DbSet<Deck> Decks { get; set; }
 
