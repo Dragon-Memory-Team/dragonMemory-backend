@@ -18,6 +18,7 @@ namespace Backend
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -38,6 +39,7 @@ namespace Backend
             app.UseAuthorization();
 
             app.MapControllers();
+
 
             app.Run();
         }
